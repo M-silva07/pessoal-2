@@ -1,0 +1,157 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f9f7f2; /* Cor de fundo suave */
+    color: #4b4b4b; /* Texto em cinza */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #6a4c8c; /* Roxo escuro */
+    color: white;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-bottom: 5px solid #d63e3e; /* Linha vermelha */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.05); /* Efeito de zoom no título */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Seções de Poemas */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Levanta a seção ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+/* Título dos poemas */
+h2 {
+    font-size: 2.5rem;
+    color: #6a4c8c; /* Roxo */
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #d63e3e; /* Linha vermelha abaixo do título */
+}
+
+/* Estilo dos versos */
+.poema {
+    font-size: 1.5rem;
+    color: #4b4b4b;
+    text-align: center;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Efeito de fade-in para os versos */
+.poema p {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.poema p:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.poema p:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.poema p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.poema p:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Imagens dos poemas */
+.foto {
+    display: block;
+    margin: 20px auto;
+    max-width: 50%; /* Reduzindo o tamanho das imagens para 50% da largura do container */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto:hover {
+    transform: scale(1.05); /* Efeito de zoom nas fotos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4b4b4b; /* Preto */
+    color: white;
+    font-size: 1rem;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #d63e3e; /* Linha vermelha acima do rodapé */
+}
+
+footer p:last-of-type {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #d63e3e;
+    margin-top: 10px;
+}
